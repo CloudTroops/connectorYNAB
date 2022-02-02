@@ -1,0 +1,226 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "API for You Need A Budget. It covers following use cases:\n1. Get the list of Budgets of a user\n2. Create new transactions within the budget\n3. Two use cases to set transactions for a particular category to cleared, uncleared or reconciled using either a flow service or a workflow",
+    "version" : "1.0",
+    "title" : " "
+  },
+  "host" : "wmioconnectorsdev.int-az-us.webmethods.io",
+  "basePath" : "/integration/restv2/development/fl30840743d2886c1e58a7a5/YouNeedABudget",
+  "schemes" : [ "https" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/budgets" : {
+      "get" : {
+        "operationId" : "budgets_GET_1",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/body"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "404" : {
+            "description" : "No budgets were found"
+          },
+          "500" : {
+            "description" : "Server Error"
+          }
+        },
+        "security" : [ {
+          "_basicAuth" : [ ]
+        } ]
+      }
+    },
+    "/transactions/create" : {
+      "post" : {
+        "operationId" : "transactionscreate_POST_2",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/body_1"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "201" : {
+            "description" : "The transactions were successfully created"
+          },
+          "400" : {
+            "description" : "Bad Request"
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "500" : {
+            "description" : "Server Error"
+          }
+        },
+        "security" : [ {
+          "_basicAuth" : [ ]
+        } ]
+      }
+    },
+    "/transactions/update" : {
+      "post" : {
+        "operationId" : "transactionsupdate_POST_3",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/body_2"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "400" : {
+            "description" : "Bad Request"
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "500" : {
+            "description" : "Server Error"
+          }
+        },
+        "security" : [ {
+          "_basicAuth" : [ ]
+        } ]
+      }
+    },
+    "/transactions/updateMultiple" : {
+      "post" : {
+        "operationId" : "transactionsupdateMultiple_POST_4",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/body_3"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "400" : {
+            "description" : "Bad Request"
+          },
+          "401" : {
+            "description" : "Unauthorized"
+          },
+          "500" : {
+            "description" : "Server Error"
+          }
+        },
+        "security" : [ {
+          "_basicAuth" : [ ]
+        } ]
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "_basicAuth" : {
+      "type" : "basic"
+    }
+  },
+  "definitions" : {
+    "transactions" : {
+      "required" : [ "amount", "category_name", "clearingStatus", "dateOfTransaction", "deleted", "flag_color", "frequency", "memo", "payee_name" ],
+      "properties" : {
+        "dateOfTransaction" : {
+          "type" : "string"
+        },
+        "frequency" : {
+          "type" : "string"
+        },
+        "amount" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "memo" : {
+          "type" : "string"
+        },
+        "flag_color" : {
+          "type" : "string"
+        },
+        "payee_name" : {
+          "type" : "string"
+        },
+        "category_name" : {
+          "type" : "string"
+        },
+        "deleted" : {
+          "type" : "boolean"
+        },
+        "clearingStatus" : {
+          "type" : "string"
+        }
+      }
+    },
+    "body_2" : {
+      "required" : [ "category", "categoryGroup", "clearingStatus" ],
+      "properties" : {
+        "categoryGroup" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "clearingStatus" : {
+          "type" : "string"
+        }
+      }
+    },
+    "body_3" : {
+      "required" : [ "category", "categoryGroup", "clearingStatus" ],
+      "properties" : {
+        "categoryGroup" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "clearingStatus" : {
+          "type" : "string"
+        }
+      }
+    },
+    "body" : {
+      "required" : [ "raw" ],
+      "properties" : {
+        "raw" : {
+          "$ref" : "#/definitions/raw"
+        }
+      }
+    },
+    "raw" : { },
+    "body_1" : {
+      "required" : [ "transactions" ],
+      "properties" : {
+        "transactions" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/transactions"
+          }
+        }
+      }
+    }
+  }
+}

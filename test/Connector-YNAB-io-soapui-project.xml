@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6616baf8-e827-4809-8f0e-dd872f186dfd" activeEnvironment="Default" name="Connector YNAB io" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="56e97417-d485-48d3-9e01-37dcb49da36d" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://wmioconnectorsdev.int-az-us.webmethods.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint></con:endpoints><con:resource name="H3LMqvX6" path="/runflow/run/sync/1f5wwy1diw" id="e191df4b-8e9d-4cf8-a787-c2dff206b20a"><con:settings/><con:parameters/><con:method name="H3LMqvX6 1" id="af373ef5-6fac-43d9-9304-0fc0a8be1605" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>400 401 500</con:status><con:params/><con:element xmlns:h3l="https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/run/sync/H3LMqvX6">h3l:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:h3l="https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/run/sync/H3LMqvX6">h3l:Response</con:element></con:representation><con:request name="Request 1" id="6d1de486-ad99-4bbb-bbc6-af7e5ff2a69e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint><con:request>{
+  "categoryGroup": "Immediate Obligations",
+  "category": "Internet",
+  "clearingStatus": "Cleared"
+}</con:request><con:originalUri>https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/run/sync/H3LMqvX6</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="a0631cb3-e3a6-4fb4-a9d3-055b6e85c7d8" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://wmioconnectorsdev.int-az-us.webmethods.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint></con:endpoints><con:resource name="2GFNiisnGo" path="/runflow/run/sync/2GFNiisnGo" id="d14838f5-8795-4f90-aa02-793cce85a5e8"><con:settings/><con:parameters/><con:method name="2GFNiisnGo 1" id="c66a6afc-ae10-447a-9890-1ea1ae47283b" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:gfn="https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/run/sync/2GFNiisnGo">gfn:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="f9a01b68-5692-42f1-8989-38325c393079" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint><con:request>{
+  "categoryGroup": "Immediate Obligations",
+  "category": "Electric",
+  "clearingStatus": "cleared"
+}</con:request><con:originalUri>https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/run/sync/2GFNiisnGo</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="1eb40261-9599-47af-988a-bc33a96b1253" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://wmioconnectorsdev.int-az-us.webmethods.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint></con:endpoints><con:resource name="2vLY3KYbbG" path="/runflow/run/sync/2vLY3KYbbG" id="6d174e16-0303-4d55-90b4-69b6eb677a7c"><con:settings/><con:parameters/><con:method name="2vLY3KYbbG 1" id="c67e04bd-d7a3-4ac0-b1c7-fb4c5f9c6290" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:vly="https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/v1/webhook/test/2vLY3KYbbG">vly:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401 400</con:status><con:params/><con:element xmlns:vly="https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/v1/webhook/test/2vLY3KYbbG">vly:Fault</con:element></con:representation><con:request name="Request 1" id="6338155d-4160-48cd-b4f8-2f5c2af423e3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint><con:request>[
+ {
+   "dateOfTransaction": "2022-02-01",
+   "frequency": "monthly",
+   "amount": -240000,
+   "memo": "",
+   "flag_color": "orange",
+   "payee_name": "RTO",
+   "category_name": "Transportation",
+   "deleted": false,
+   "clearingStatus": "uncleared"
+ },
+ {
+   "dateOfTransaction": "2022-02-01",
+   "frequency": "monthly",
+   "amount": -1200000,
+   "memo": "",
+   "flag_color": "green",
+   "payee_name": "TimeConti",
+   "category_name": "Rent/Mortgage",
+   "deleted": false,
+   "clearingStatus": "cleared"
+ },
+ {
+   "dateOfTransaction": "2022-02-01",
+   "frequency": "monthly",
+   "amount": -59990,
+   "memo": "",
+   "flag_color": "orange",
+   "payee_name": "TPG",
+   "category_name": "Internet",
+   "deleted": false,
+   "clearingStatus": "uncleared"
+ },
+ {
+   "dateOfTransaction": "2022-01-31",
+   "frequency": "weekly",
+   "amount": -85000,
+   "memo": "",
+   "flag_color": "red",
+   "payee_name": "FoodHippo",
+   "category_name": "Dining Out",
+   "deleted": false,
+   "clearingStatus": "uncleared"
+ }
+]</con:request><con:originalUri>https://wmioconnectorsdev.int-az-us.webmethods.io/runflow/v1/webhook/test/2vLY3KYbbG</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

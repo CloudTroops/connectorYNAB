@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b96f2a98-3c15-4cba-ab7e-480a376f9519" activeEnvironment="Default" name="ConnectorYNAB_ioAPI" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="2c5f5581-a0ea-4e2e-8c78-594e51499b6d" wadlVersion="http://wadl.dev.java.net/2009/02" name="" type="rest" basePath="/integration/restv2/development/fl30840743d2886c1e58a7a5/YouNeedABudget" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:description>API for You Need A Budget. It covers following use cases:
+1. Get the list of Budgets of a user
+2. Create new transactions within the budget
+3. Two use cases to set transactions for a particular category to cleared, uncleared or reconciled using either a flow service or a workflow</con:description><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint></con:endpoints><con:resource name="/budgets" path="/budgets" id="30b047cf-643b-403b-a78a-22f14a583214"><con:settings/><con:parameters/><con:method name="budgets_GET_1" id="a9da0157-a93d-4865-97f9-6d7f650b9bed" method="GET"><con:description>&#13;
+</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/></con:representation><con:request name="Request 1" id="4cc8caf2-64c1-4a6d-9afb-5d1d94e5d736" mediaType="application/json"><con:settings/><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint><con:request>{\r
+  "raw" : { }\r
+}</con:request><con:parameters/></con:request></con:method></con:resource><con:resource name="/transactions/create" path="/transactions/create" id="c0c3e211-5eaf-4770-a199-e674fec95af4"><con:settings/><con:parameters/><con:method name="transactionscreate_POST_2" id="128f68b4-cff6-41fa-b770-f7a1ffc04d1d" method="POST"><con:description>&#13;
+</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/></con:representation><con:request name="Request 1" id="c0060f03-f2b2-47ae-bc13-8fb53c0a6b9e" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint><con:request>{
+	"transactions":
+	[
+		 {
+		   "dateOfTransaction": "2022-02-01",
+		   "frequency": "monthly",
+		   "amount": -240000,
+		   "memo": "",
+		   "flag_color": "orange",
+		   "payee_name": "RTO",
+		   "category_name": "Transportation",
+		   "deleted": false,
+		   "clearingStatus": "uncleared"
+		 },
+		 {
+		   "dateOfTransaction": "2022-02-01",
+		   "frequency": "monthly",
+		   "amount": -1200000,
+		   "memo": "",
+		   "flag_color": "green",
+		   "payee_name": "TimeConti",
+		   "category_name": "Rent/Mortgage",
+		   "deleted": false,
+		   "clearingStatus": "cleared"
+		 },
+		 {
+		   "dateOfTransaction": "2022-02-01",
+		   "frequency": "monthly",
+		   "amount": -59990,
+		   "memo": "",
+		   "flag_color": "orange",
+		   "payee_name": "TPG",
+		   "category_name": "Internet",
+		   "deleted": false,
+		   "clearingStatus": "uncleared"
+		 },
+		 {
+		   "dateOfTransaction": "2022-01-31",
+		   "frequency": "weekly",
+		   "amount": -85000,
+		   "memo": "",
+		   "flag_color": "red",
+		   "payee_name": "FoodHippo",
+		   "category_name": "Dining Out",
+		   "deleted": false,
+		   "clearingStatus": "uncleared"
+		 }
+	]
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="/transactions/update" path="/transactions/update" id="3bdf6838-17b9-4453-99e4-49f9698371f2"><con:settings/><con:parameters/><con:method name="transactionsupdate_POST_3" id="fe65b7c3-f509-4b24-926e-befa598578c6" method="POST"><con:description>&#13;
+</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/></con:representation><con:request name="Request 1" id="2dab947e-af4f-484d-aece-b5c03181a1dc" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint><con:request>{
+  "categoryGroup": "Immediate Obligations",
+  "category": "Internet",
+  "clearingStatus": "Cleared"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="/transactions/updateMultiple" path="/transactions/updateMultiple" id="d4a3c3c4-a7a5-414b-89db-66f888d5280b"><con:settings/><con:parameters/><con:method name="transactionsupdateMultiple_POST_4" id="9dd90422-1384-491d-9f07-3be256f2c66e" method="POST"><con:description>&#13;
+</con:description><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>500</con:status><con:params/></con:representation><con:request name="Request 1" id="ccb4e3ba-c502-4127-a194-2fc5be991a2d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://wmioconnectorsdev.int-az-us.webmethods.io</con:endpoint><con:request>{
+  "categoryGroup": "Immediate Obligations",
+  "category": "Electric",
+  "clearingStatus": "Uncleared"
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
