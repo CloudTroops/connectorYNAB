@@ -1,0 +1,46 @@
+[
+ {
+   "dateOfTransaction": "2022-02-01",
+   "frequency": "monthly",
+   "amount": -240000,
+   "memo": "",
+   "flag_color": "orange",
+   "payee_name": "RTO",
+   "category_name": "Transportation",
+   "deleted": false,
+   "clearingStatus": "uncleared"
+ },
+ {
+   "dateOfTransaction": "2022-02-01",
+   "frequency": "monthly",
+   "amount": -1200000,
+   "memo": "",
+   "flag_color": "green",
+   "payee_name": "TimeConti",
+   "category_name": "Rent/Mortgage",
+   "deleted": false,
+   "clearingStatus": "cleared"
+ },
+ {
+   "dateOfTransaction": "2022-02-01",
+   "frequency": "monthly",
+   "amount": -59990,
+   "memo": "",
+   "flag_color": "orange",
+   "payee_name": "TPG",
+   "category_name": "Internet",
+   "deleted": false,
+   "clearingStatus": "uncleared"
+ },
+ {
+   "dateOfTransaction": "2022-01-31",
+   "frequency": "weekly",
+   "amount": -85000,
+   "memo": "",
+   "flag_color": "red",
+   "payee_name": "FoodHippo",
+   "category_name": "Dining Out",
+   "deleted": false,
+   "clearingStatus": "uncleared"
+ }
+]
